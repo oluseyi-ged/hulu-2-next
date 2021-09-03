@@ -1,7 +1,11 @@
-function Results() {
+import Thumbnail from "./Thumbnail"
+
+function Results({ results }) {
   return (
     <div>
-      <h1> results</h1>
+      {results.map((result) => (
+        <Thumbnail key={result.id} result={result} />
+      ))}
     </div>
   )
 }
